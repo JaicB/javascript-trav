@@ -40,8 +40,8 @@ document.getElementById("book-form").addEventListener("submit", function (e) {
 
   const book = new Book(title, author, isbn);
   
-  // Instatiate UI
-  const ui = new UI();
+  // Instantiate UI
+  const ui = new UI();:
 
   // Add book to list
   ui.addBookToList(book);
