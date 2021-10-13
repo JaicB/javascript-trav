@@ -1,40 +1,45 @@
-const posts = [
-  { title: "Post One", body: "This is post one" },
-  { title: "Post Two", body: "This is post two" },
-];
+// const sayHello = function() {
+//   console.log('Hello');
+// }
 
-function createPost(post) {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      posts.push(post);
+// const sayHello = () => {
+//   console.log('Hello');
+// }
 
-      const error = false;
+// One line function does not need braces
+// const sayHello = () => console.log('Hello');
 
-      if(!error) {
-        resolve();
-      } else {
-        reject('Error: Something went wrong');
-      };
+// One Line returns
+// const sayHello = () => 'Hello';
 
-      resolve();
-    }, 2000);
-  });
+// Same as above
+// const sayHello = function() {
+//   return 'Hello';
+// }
 
-}
+// Return Object 
+// const sayHello = () => ({msg: 'Hello'});
 
-function getPosts() {
-  setTimeout(function () {
-    let output = "";
+// Single param does not need parenthesis
+// const sayHello = name => console.log(`Hello ${name}`);
 
-    posts.forEach(function (post) {
-      output += `<li>${post.title}</li>`;
-    });
-    document.body.innerHTML = output;
-  }, 1000);
-}
+//  Multiple params need parenthesis
+// const sayHello = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
 
-createPost({ title: "Post Three", body: "This is post three" })
-.then(getPosts)
-.catch(function(err) {
-  console.log(err)
-});
+// sayHello('Jake', 'Bryant');
+
+const users = ['Nathan', 'John', 'William'];
+
+// const nameLengths = users.map(function(name) {
+//   return name.length;
+// });
+
+// Shorter
+// const nameLengths = users.map((name) => {
+//   return name.length;
+// });
+
+// Shortest
+const nameLengths = users.map(name => name.length); 
+
+console.log(nameLengths);
